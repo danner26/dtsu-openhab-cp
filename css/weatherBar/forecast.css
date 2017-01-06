@@ -1,0 +1,47 @@
+/* WEATHER FORECAST  */
+#forecastIcon {
+	height: 100px;
+	width: 15%;
+	left: 0px;
+	display: inline-block;
+	float: left;
+}
+#forecastIcon > img {
+	padding: 25px 10px 25px 5px;
+}
+.forecast {
+	height: 100px;
+	width: 35%;
+	display: inline-block;
+	padding-top: 15px;
+}
+#forecastWeather {
+	white-space: pre-wrap;
+	word-wrap: break-word;
+}
+.forecastInformation {
+	display: inline-block;
+	width: 50%;
+	height: 100px;
+	float: right;
+	padding-top: 15px;
+}
+.forecastInformation > #forecast_high {
+	position: absolute;
+	bottom: 46px;
+	font-size: 1.5em;
+}
+.forecastInformation > #forecast_low {
+	position: absolute;
+	bottom: 15px;
+	font-size: 0.75em;
+	font-style: italic;
+}
+.forecastInformation > .underlayer {
+	font-size: 3em;
+	font-weight: bold;
+	color: #333333;
+	float: right;
+	padding-right: .25em;
+	padding-top: .45em;
+}
