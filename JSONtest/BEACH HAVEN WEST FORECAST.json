@@ -1,0 +1,804 @@
+{
+    "response": {
+        "version": "0.1",
+        "termsofService": "http://www.wunderground.com/weather/api/d/terms.html",
+        "features": {
+            "geolookup": 1,
+            "forecast": 1
+        }
+    },
+    "location": {
+        "type": "CITY",
+        "country": "US",
+        "country_iso3166": "US",
+        "country_name": "USA",
+        "state": "NJ",
+        "city": "Beach Haven West",
+        "tz_short": "EST",
+        "tz_long": "America/New_York",
+        "lat": "39.66999817",
+        "lon": "-74.23000336",
+        "zip": "08050",
+        "magic": "2",
+        "wmo": "99999",
+        "l": "/q/zmw:08050.2.99999",
+        "requesturl": "US/NJ/Beach_Haven_West.html",
+        "wuiurl": "https://www.wunderground.com/US/NJ/Beach_Haven_West.html",
+        "nearby_weather_stations": {
+            "airport": {
+                "station": [{
+                    "city": "Toms River",
+                    "state": "NJ",
+                    "country": "US",
+                    "icao": "KMJX",
+                    "lat": "39.92749786",
+                    "lon": "-74.29238129"
+                }, {
+                    "city": "Atlantic City",
+                    "state": "NJ",
+                    "country": "US",
+                    "icao": "KACY",
+                    "lat": "39.45201874",
+                    "lon": "-74.56699371"
+                }, {
+                    "city": "Lakehurst NAS",
+                    "state": "NJ",
+                    "country": "US",
+                    "icao": "KNEL",
+                    "lat": "40.03338242",
+                    "lon": "-74.35360718"
+                }, {
+                    "city": "McGuire AFB",
+                    "state": "NJ",
+                    "country": "US",
+                    "icao": "KWRI",
+                    "lat": "40.01558304",
+                    "lon": "-74.59169769"
+                }]
+            },
+            "pws": {
+                "station": [{
+                        "neighborhood": "ManahawkinCoves",
+                        "city": "Manahawkin",
+                        "state": "NJ",
+                        "country": "US",
+                        "id": "KNJMANAH10",
+                        "lat": 39.667534,
+                        "lon": -74.236320,
+                        "distance_km": 0,
+                        "distance_mi": 0
+                    },
+                    {
+                        "neighborhood": "Beach Haven West",
+                        "city": "Manahawkin",
+                        "state": "NJ",
+                        "country": "US",
+                        "id": "KNJMANAH6",
+                        "lat": 39.665455,
+                        "lon": -74.223969,
+                        "distance_km": 0,
+                        "distance_mi": 0
+                    },
+                    {
+                        "neighborhood": "Manahawkin",
+                        "city": "Beach Haven West",
+                        "state": "NJ",
+                        "country": "US",
+                        "id": "KNJBEACH23",
+                        "lat": 39.661388,
+                        "lon": -74.224060,
+                        "distance_km": 1,
+                        "distance_mi": 0
+                    },
+                    {
+                        "neighborhood": "Village Harbor, Beach Haven West",
+                        "city": "Stafford Township",
+                        "state": "NJ",
+                        "country": "US",
+                        "id": "KNJSTAFF6",
+                        "lat": 39.678894,
+                        "lon": -74.242455,
+                        "distance_km": 1,
+                        "distance_mi": 0
+                    },
+                    {
+                        "neighborhood": "Beach Haven West",
+                        "city": "Manahawkin",
+                        "state": "NJ",
+                        "country": "US",
+                        "id": "KNJMANAH8",
+                        "lat": 39.655910,
+                        "lon": -74.220703,
+                        "distance_km": 1,
+                        "distance_mi": 1
+                    },
+                    {
+                        "neighborhood": "LBI-Ship Bottom",
+                        "city": "Beach Haven",
+                        "state": "NJ",
+                        "country": "US",
+                        "id": "KNJBEACH21",
+                        "lat": 39.647465,
+                        "lon": -74.183990,
+                        "distance_km": 4,
+                        "distance_mi": 2
+                    },
+                    {
+                        "neighborhood": "",
+                        "city": "Surf City",
+                        "state": "NJ",
+                        "country": "US",
+                        "id": "KNJBEACH4",
+                        "lat": 39.662449,
+                        "lon": -74.175217,
+                        "distance_km": 4,
+                        "distance_mi": 2
+                    },
+                    {
+                        "neighborhood": "Rue du Béarn",
+                        "city": "West Creek",
+                        "state": "NJ",
+                        "country": "US",
+                        "id": "KNJWESTC4",
+                        "lat": 39.679619,
+                        "lon": -74.285484,
+                        "distance_km": 4,
+                        "distance_mi": 2
+                    },
+                    {
+                        "neighborhood": "Beach Arlington",
+                        "city": "Ship Bottom",
+                        "state": "NJ",
+                        "country": "US",
+                        "id": "KNJSHIPB2",
+                        "lat": 39.643780,
+                        "lon": -74.179321,
+                        "distance_km": 5,
+                        "distance_mi": 3
+                    },
+                    {
+                        "neighborhood": "East 24th Street",
+                        "city": "Surf City",
+                        "state": "NJ",
+                        "country": "US",
+                        "id": "KNJSURFC4",
+                        "lat": 39.639256,
+                        "lon": -74.181839,
+                        "distance_km": 5,
+                        "distance_mi": 3
+                    },
+                    {
+                        "neighborhood": "Surf City, Ocean Front",
+                        "city": "Beach Haven",
+                        "state": "NJ",
+                        "country": "US",
+                        "id": "KNJBEACH19",
+                        "lat": 39.652977,
+                        "lon": -74.171257,
+                        "distance_km": 5,
+                        "distance_mi": 3
+                    },
+                    {
+                        "neighborhood": "Brant Beach",
+                        "city": "Beach Haven",
+                        "state": "NJ",
+                        "country": "US",
+                        "id": "KNJBEACH20",
+                        "lat": 39.625843,
+                        "lon": -74.193169,
+                        "distance_km": 5,
+                        "distance_mi": 3
+                    },
+                    {
+                        "neighborhood": "Manahawkin",
+                        "city": "Stafford Township",
+                        "state": "NJ",
+                        "country": "US",
+                        "id": "KNJSTAFF4",
+                        "lat": 39.721130,
+                        "lon": -74.253410,
+                        "distance_km": 6,
+                        "distance_mi": 3
+                    },
+                    {
+                        "neighborhood": "Beachview Area Stafford Twsp.",
+                        "city": "Stafford Township",
+                        "state": "NJ",
+                        "country": "US",
+                        "id": "KNJSTAFF2",
+                        "lat": 39.723560,
+                        "lon": -74.246300,
+                        "distance_km": 6,
+                        "distance_mi": 3
+                    },
+                    {
+                        "neighborhood": "West Creek",
+                        "city": "Eagleswood",
+                        "state": "NJ",
+                        "country": "US",
+                        "id": "KNJEAGLE3",
+                        "lat": 39.655514,
+                        "lon": -74.307808,
+                        "distance_km": 6,
+                        "distance_mi": 4
+                    },
+                    {
+                        "neighborhood": "West Creek",
+                        "city": "Eagleswood",
+                        "state": "NJ",
+                        "country": "US",
+                        "id": "KNJEAGLE2",
+                        "lat": 39.652691,
+                        "lon": -74.307304,
+                        "distance_km": 6,
+                        "distance_mi": 4
+                    },
+                    {
+                        "neighborhood": "",
+                        "city": "West Creek",
+                        "state": "NJ",
+                        "country": "US",
+                        "id": "MSTFN4",
+                        "lat": 39.666698,
+                        "lon": -74.320000,
+                        "distance_km": 7,
+                        "distance_mi": 4
+                    },
+                    {
+                        "neighborhood": "Highland Ave",
+                        "city": "Long Beach Township",
+                        "state": "NJ",
+                        "country": "US",
+                        "id": "KNJLONGB10",
+                        "lat": 39.601097,
+                        "lon": -74.212570,
+                        "distance_km": 7,
+                        "distance_mi": 4
+                    },
+                    {
+                        "neighborhood": "Beach Haven Park",
+                        "city": "Long Beach Township",
+                        "state": "NJ",
+                        "country": "US",
+                        "id": "KNJLONGB14",
+                        "lat": 39.601479,
+                        "lon": -74.208511,
+                        "distance_km": 7,
+                        "distance_mi": 4
+                    },
+                    {
+                        "neighborhood": "Ocean Acres, NJ",
+                        "city": "Manahawkin",
+                        "state": "NJ",
+                        "country": "US",
+                        "id": "KNJMANAH9",
+                        "lat": 39.743011,
+                        "lon": -74.268906,
+                        "distance_km": 8,
+                        "distance_mi": 5
+                    },
+                    {
+                        "neighborhood": "The Dunes",
+                        "city": "Long Beach Township",
+                        "state": "NJ",
+                        "country": "US",
+                        "id": "KNJLONGB16",
+                        "lat": 39.589497,
+                        "lon": -74.220390,
+                        "distance_km": 8,
+                        "distance_mi": 5
+                    },
+                    {
+                        "neighborhood": "LBI North End",
+                        "city": "Harvey Cedars",
+                        "state": "NJ",
+                        "country": "US",
+                        "id": "KNJHARVE2",
+                        "lat": 39.710213,
+                        "lon": -74.133911,
+                        "distance_km": 9,
+                        "distance_mi": 5
+                    },
+                    {
+                        "neighborhood": "Ocean Acres",
+                        "city": "Manahawkin",
+                        "state": "NJ",
+                        "country": "US",
+                        "id": "KNJMANAH4",
+                        "lat": 39.746498,
+                        "lon": -74.284302,
+                        "distance_km": 9,
+                        "distance_mi": 5
+                    },
+                    {
+                        "neighborhood": "Loveladies Ocean",
+                        "city": "Beach Haven",
+                        "state": "NJ",
+                        "country": "US",
+                        "id": "KNJBEACH16",
+                        "lat": 39.714230,
+                        "lon": -74.129219,
+                        "distance_km": 9,
+                        "distance_mi": 5
+                    },
+                    {
+                        "neighborhood": "Love Ladies Oceanside",
+                        "city": "Beach Haven",
+                        "state": "NJ",
+                        "country": "US",
+                        "id": "KNJBEACH24",
+                        "lat": 39.719200,
+                        "lon": -74.127731,
+                        "distance_km": 10,
+                        "distance_mi": 6
+                    },
+                    {
+                        "neighborhood": "@LBIWeather (LBIWeather.com)",
+                        "city": "No. Beach Haven",
+                        "state": "NJ",
+                        "country": "US",
+                        "id": "KNJNORTH6",
+                        "lat": 39.576481,
+                        "lon": -74.231621,
+                        "distance_km": 10,
+                        "distance_mi": 6
+                    },
+                    {
+                        "neighborhood": "Barnegat",
+                        "city": "Barnegat Township",
+                        "state": "NJ",
+                        "country": "US",
+                        "id": "KNJBARNE10",
+                        "lat": 39.763775,
+                        "lon": -74.256554,
+                        "distance_km": 10,
+                        "distance_mi": 6
+                    },
+                    {
+                        "neighborhood": "Timbers",
+                        "city": "Barnegat",
+                        "state": "NJ",
+                        "country": "US",
+                        "id": "KNJBARNE5",
+                        "lat": 39.767082,
+                        "lon": -74.237137,
+                        "distance_km": 10,
+                        "distance_mi": 6
+                    },
+                    {
+                        "neighborhood": "High Bar Harbor",
+                        "city": "Long Beach Township",
+                        "state": "NJ",
+                        "country": "US",
+                        "id": "KNJLONGB7",
+                        "lat": 39.750069,
+                        "lon": -74.135742,
+                        "distance_km": 12,
+                        "distance_mi": 7
+                    },
+                    {
+                        "neighborhood": "Loveladies",
+                        "city": "Beach Haven",
+                        "state": "NJ",
+                        "country": "US",
+                        "id": "KNJBEACH14",
+                        "lat": 39.741077,
+                        "lon": -74.122772,
+                        "distance_km": 12,
+                        "distance_mi": 7
+                    },
+                    {
+                        "neighborhood": "hcw",
+                        "city": "Ocean Township",
+                        "state": "NJ",
+                        "country": "US",
+                        "id": "KNJOCEAN35",
+                        "lat": 39.780056,
+                        "lon": -74.231598,
+                        "distance_km": 12,
+                        "distance_mi": 7
+                    },
+                    {
+                        "neighborhood": "West Tuckerton",
+                        "city": "Little Egg Harbor Township",
+                        "state": "NJ",
+                        "country": "US",
+                        "id": "KNJLITTL7",
+                        "lat": 39.603745,
+                        "lon": -74.349045,
+                        "distance_km": 12,
+                        "distance_mi": 7
+                    },
+                    {
+                        "neighborhood": "Beach Haven",
+                        "city": "Viking Village",
+                        "state": "NJ",
+                        "country": "US",
+                        "id": "KNJVIKIN2",
+                        "lat": 39.744808,
+                        "lon": -74.117523,
+                        "distance_km": 12,
+                        "distance_mi": 7
+                    }
+                ]
+            }
+        }
+    },
+    "forecast": {
+        "txt_forecast": {
+            "date": "6:26 PM EST",
+            "forecastday": [{
+                    "period": 0,
+                    "icon": "chancerain",
+                    "icon_url": "http://icons.wxug.com/i/c/k/chancerain.gif",
+                    "title": "Sunday",
+                    "fcttext": "Showers late. Lows overnight in the mid 30s.",
+                    "fcttext_metric": "Chance of late night showers. Low 0C.",
+                    "pop": "40"
+                },
+                {
+                    "period": 1,
+                    "icon": "nt_chancerain",
+                    "icon_url": "http://icons.wxug.com/i/c/k/nt_chancerain.gif",
+                    "title": "Sunday Night",
+                    "fcttext": "Mostly clear skies this evening will give way to occasional showers overnight. Low 34F. Winds light and variable. Chance of rain 40%.",
+                    "fcttext_metric": "Mostly clear skies early. Increasing clouds with showers late. Low around 0C. Winds light and variable. Chance of rain 40%.",
+                    "pop": "40"
+                },
+                {
+                    "period": 2,
+                    "icon": "rain",
+                    "icon_url": "http://icons.wxug.com/i/c/k/rain.gif",
+                    "title": "Monday",
+                    "fcttext": "Cloudy with periods of rain. High 46F. Winds ENE at 10 to 20 mph. Chance of rain 80%. Rainfall near a quarter of an inch.",
+                    "fcttext_metric": "Rain. High 8C. Winds ENE at 15 to 30 km/h. Chance of rain 80%. Rainfall near 6mm.",
+                    "pop": "80"
+                },
+                {
+                    "period": 3,
+                    "icon": "nt_chancerain",
+                    "icon_url": "http://icons.wxug.com/i/c/k/nt_chancerain.gif",
+                    "title": "Monday Night",
+                    "fcttext": "Cloudy with showers. Low 43F. Winds NE at 10 to 20 mph. Chance of rain 50%.",
+                    "fcttext_metric": "Cloudy with occasional rain showers. Low 6C. Winds NE at 15 to 30 km/h. Chance of rain 50%.",
+                    "pop": "50"
+                },
+                {
+                    "period": 4,
+                    "icon": "rain",
+                    "icon_url": "http://icons.wxug.com/i/c/k/rain.gif",
+                    "title": "Tuesday",
+                    "fcttext": "Rain showers in the morning will evolve into a more steady rain in the afternoon. High 52F. Winds NE at 10 to 20 mph. Chance of rain 90%. Rainfall around a quarter of an inch.",
+                    "fcttext_metric": "Rain showers in the morning will evolve into a more steady rain in the afternoon. High 11C. Winds NE at 15 to 30 km/h. Chance of rain 90%. Rainfall around 6mm.",
+                    "pop": "90"
+                },
+                {
+                    "period": 5,
+                    "icon": "nt_rain",
+                    "icon_url": "http://icons.wxug.com/i/c/k/nt_rain.gif",
+                    "title": "Tuesday Night",
+                    "fcttext": "Cloudy with occasional rain...mainly in the evening. Low 44F. Winds W at 5 to 10 mph. Chance of rain 60%.",
+                    "fcttext_metric": "Rain ending early. Remaining cloudy. Low 6C. Winds W at 10 to 15 km/h. Chance of rain 60%.",
+                    "pop": "60"
+                },
+                {
+                    "period": 6,
+                    "icon": "mostlycloudy",
+                    "icon_url": "http://icons.wxug.com/i/c/k/mostlycloudy.gif",
+                    "title": "Wednesday",
+                    "fcttext": "Partly cloudy skies in the morning will give way to cloudy skies during the afternoon. High 53F. Winds WNW at 10 to 20 mph.",
+                    "fcttext_metric": "Partly cloudy skies in the morning will give way to cloudy skies during the afternoon. High 11C. Winds WNW at 15 to 30 km/h.",
+                    "pop": "10"
+                },
+                {
+                    "period": 7,
+                    "icon": "nt_clear",
+                    "icon_url": "http://icons.wxug.com/i/c/k/nt_clear.gif",
+                    "title": "Wednesday Night",
+                    "fcttext": "Mostly clear skies. Low 27F. Winds WNW at 10 to 15 mph.",
+                    "fcttext_metric": "A few clouds from time to time. Low -3C. Winds WNW at 15 to 25 km/h.",
+                    "pop": "0"
+                }
+            ]
+        },
+        "simpleforecast": {
+            "forecastday": [{
+                    "date": {
+                        "epoch": "1483315200",
+                        "pretty": "7:00 PM EST on January 01, 2017",
+                        "day": 1,
+                        "month": 1,
+                        "year": 2017,
+                        "yday": 0,
+                        "hour": 19,
+                        "min": "00",
+                        "sec": 0,
+                        "isdst": "0",
+                        "monthname": "January",
+                        "monthname_short": "Jan",
+                        "weekday_short": "Sun",
+                        "weekday": "Sunday",
+                        "ampm": "PM",
+                        "tz_short": "EST",
+                        "tz_long": "America/New_York"
+                    },
+                    "period": 1,
+                    "high": {
+                        "fahrenheit": "53",
+                        "celsius": "12"
+                    },
+                    "low": {
+                        "fahrenheit": "34",
+                        "celsius": "1"
+                    },
+                    "conditions": "Chance of Rain",
+                    "icon": "chancerain",
+                    "icon_url": "http://icons.wxug.com/i/c/k/chancerain.gif",
+                    "skyicon": "",
+                    "pop": 40,
+                    "qpf_allday": {
+                        "in": 0.01,
+                        "mm": 0
+                    },
+                    "qpf_day": {
+                        "in": null,
+                        "mm": null
+                    },
+                    "qpf_night": {
+                        "in": 0.01,
+                        "mm": 0
+                    },
+                    "snow_allday": {
+                        "in": 0.0,
+                        "cm": 0.0
+                    },
+                    "snow_day": {
+                        "in": null,
+                        "cm": null
+                    },
+                    "snow_night": {
+                        "in": 0.0,
+                        "cm": 0.0
+                    },
+                    "maxwind": {
+                        "mph": 0,
+                        "kph": 0,
+                        "dir": "",
+                        "degrees": 0
+                    },
+                    "avewind": {
+                        "mph": 5,
+                        "kph": 8,
+                        "dir": "West",
+                        "degrees": 266
+                    },
+                    "avehumidity": 73,
+                    "maxhumidity": 0,
+                    "minhumidity": 0
+                },
+                {
+                    "date": {
+                        "epoch": "1483401600",
+                        "pretty": "7:00 PM EST on January 02, 2017",
+                        "day": 2,
+                        "month": 1,
+                        "year": 2017,
+                        "yday": 1,
+                        "hour": 19,
+                        "min": "00",
+                        "sec": 0,
+                        "isdst": "0",
+                        "monthname": "January",
+                        "monthname_short": "Jan",
+                        "weekday_short": "Mon",
+                        "weekday": "Monday",
+                        "ampm": "PM",
+                        "tz_short": "EST",
+                        "tz_long": "America/New_York"
+                    },
+                    "period": 2,
+                    "high": {
+                        "fahrenheit": "46",
+                        "celsius": "8"
+                    },
+                    "low": {
+                        "fahrenheit": "43",
+                        "celsius": "6"
+                    },
+                    "conditions": "Rain",
+                    "icon": "rain",
+                    "icon_url": "http://icons.wxug.com/i/c/k/rain.gif",
+                    "skyicon": "",
+                    "pop": 80,
+                    "qpf_allday": {
+                        "in": 0.38,
+                        "mm": 10
+                    },
+                    "qpf_day": {
+                        "in": 0.30,
+                        "mm": 8
+                    },
+                    "qpf_night": {
+                        "in": 0.08,
+                        "mm": 2
+                    },
+                    "snow_allday": {
+                        "in": 0.0,
+                        "cm": 0.0
+                    },
+                    "snow_day": {
+                        "in": 0.0,
+                        "cm": 0.0
+                    },
+                    "snow_night": {
+                        "in": 0.0,
+                        "cm": 0.0
+                    },
+                    "maxwind": {
+                        "mph": 20,
+                        "kph": 32,
+                        "dir": "ENE",
+                        "degrees": 74
+                    },
+                    "avewind": {
+                        "mph": 13,
+                        "kph": 21,
+                        "dir": "ENE",
+                        "degrees": 74
+                    },
+                    "avehumidity": 86,
+                    "maxhumidity": 0,
+                    "minhumidity": 0
+                },
+                {
+                    "date": {
+                        "epoch": "1483488000",
+                        "pretty": "7:00 PM EST on January 03, 2017",
+                        "day": 3,
+                        "month": 1,
+                        "year": 2017,
+                        "yday": 2,
+                        "hour": 19,
+                        "min": "00",
+                        "sec": 0,
+                        "isdst": "0",
+                        "monthname": "January",
+                        "monthname_short": "Jan",
+                        "weekday_short": "Tue",
+                        "weekday": "Tuesday",
+                        "ampm": "PM",
+                        "tz_short": "EST",
+                        "tz_long": "America/New_York"
+                    },
+                    "period": 3,
+                    "high": {
+                        "fahrenheit": "52",
+                        "celsius": "11"
+                    },
+                    "low": {
+                        "fahrenheit": "44",
+                        "celsius": "7"
+                    },
+                    "conditions": "Rain",
+                    "icon": "rain",
+                    "icon_url": "http://icons.wxug.com/i/c/k/rain.gif",
+                    "skyicon": "",
+                    "pop": 90,
+                    "qpf_allday": {
+                        "in": 0.38,
+                        "mm": 10
+                    },
+                    "qpf_day": {
+                        "in": 0.25,
+                        "mm": 6
+                    },
+                    "qpf_night": {
+                        "in": 0.13,
+                        "mm": 3
+                    },
+                    "snow_allday": {
+                        "in": 0.0,
+                        "cm": 0.0
+                    },
+                    "snow_day": {
+                        "in": 0.0,
+                        "cm": 0.0
+                    },
+                    "snow_night": {
+                        "in": 0.0,
+                        "cm": 0.0
+                    },
+                    "maxwind": {
+                        "mph": 20,
+                        "kph": 32,
+                        "dir": "NE",
+                        "degrees": 54
+                    },
+                    "avewind": {
+                        "mph": 15,
+                        "kph": 24,
+                        "dir": "NE",
+                        "degrees": 54
+                    },
+                    "avehumidity": 90,
+                    "maxhumidity": 0,
+                    "minhumidity": 0
+                },
+                {
+                    "date": {
+                        "epoch": "1483574400",
+                        "pretty": "7:00 PM EST on January 04, 2017",
+                        "day": 4,
+                        "month": 1,
+                        "year": 2017,
+                        "yday": 3,
+                        "hour": 19,
+                        "min": "00",
+                        "sec": 0,
+                        "isdst": "0",
+                        "monthname": "January",
+                        "monthname_short": "Jan",
+                        "weekday_short": "Wed",
+                        "weekday": "Wednesday",
+                        "ampm": "PM",
+                        "tz_short": "EST",
+                        "tz_long": "America/New_York"
+                    },
+                    "period": 4,
+                    "high": {
+                        "fahrenheit": "53",
+                        "celsius": "12"
+                    },
+                    "low": {
+                        "fahrenheit": "27",
+                        "celsius": "-3"
+                    },
+                    "conditions": "Mostly Cloudy",
+                    "icon": "mostlycloudy",
+                    "icon_url": "http://icons.wxug.com/i/c/k/mostlycloudy.gif",
+                    "skyicon": "",
+                    "pop": 10,
+                    "qpf_allday": {
+                        "in": 0.00,
+                        "mm": 0
+                    },
+                    "qpf_day": {
+                        "in": 0.00,
+                        "mm": 0
+                    },
+                    "qpf_night": {
+                        "in": 0.00,
+                        "mm": 0
+                    },
+                    "snow_allday": {
+                        "in": 0.0,
+                        "cm": 0.0
+                    },
+                    "snow_day": {
+                        "in": 0.0,
+                        "cm": 0.0
+                    },
+                    "snow_night": {
+                        "in": 0.0,
+                        "cm": 0.0
+                    },
+                    "maxwind": {
+                        "mph": 20,
+                        "kph": 32,
+                        "dir": "WNW",
+                        "degrees": 283
+                    },
+                    "avewind": {
+                        "mph": 15,
+                        "kph": 24,
+                        "dir": "WNW",
+                        "degrees": 283
+                    },
+                    "avehumidity": 73,
+                    "maxhumidity": 0,
+                    "minhumidity": 0
+                }
+            ]
+        }
+    }
+}
