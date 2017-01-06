@@ -1,0 +1,146 @@
+<html>
+	<head>
+		<title>Automation Dashboard</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+		<!-- Favicon System Icons -->
+		<link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-touch-icon.png">
+		<link rel="icon" type="image/png" href="/icons/favicon-32x32.png" sizes="32x32">
+		<link rel="icon" type="image/png" href="/icons/favicon-16x16.png" sizes="16x16">
+		<link rel="manifest" href="/icons/manifest.json">
+		<link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#00aba9">
+		<link rel="shortcut icon" href="/icons/favicon.ico">
+		<meta name="msapplication-config" content="/icons/browserconfig.xml">
+		<meta name="theme-color" content="#00aba9">
+
+		<!-- Javascript Scripts -->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.atmosphere.js"></script>
+		<script src="js/dashboard.js"></script>
+		<script src="js/bootstrap/bootstrap.min.js"></script>
+
+		<!-- CSS Scripts -->
+		<link rel="stylesheet" href="css/bootstrap/bootstrap.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/weatherBar/forecast.css" />
+		<link rel="stylesheet" href="css/weatherBar/observation.css" />
+		<link rel="stylesheet" href="css/weatherBar/tides.css" />
+
+		<script type="text/javascript">
+			var openhabURL = "192.168.1.15:8080/rest/items/"; // TODO: change this to your Pi's IP address
+			// Log URL
+			var logURL = "http://192.168.1.15/data.php?item="; // TODO: change this to your Pi's IP address
+			//var weatherURL = "http://api.wunderground.com/api/82b80e196c5c7f69/geolookup/conditions/q/NJ/BEACH%20HAVEN%20WEST.json";
+			//var forecastURL = "http://api.wunderground.com/api/82b80e196c5c7f69/geolookup/forecast/q/NJ/BEACH%20HAVEN%20WEST.json";
+			//var tideURL = "https://www.worldtides.info/api?extremes&lat=39.705&lon=-74.263&key=778ad6aa-f430-4b80-a8e4-d1afa09032a9";
+
+			//TESTING URLs
+			var weatherURL = "http://json.sites.dev/BEACH%20HAVEN%20WEST.json";
+			var forecastURL = "http://json.sites.dev/BEACH%20HAVEN%20WEST%20FORECAST.json";
+			var tideURL = "http://json.sites.dev/tide.json";
+
+			// Logging level (0 = off, 1 = ajax errors only, 2 = some logging, 3 = full logging)
+			var loggingLevel = 3;
+
+			// How often to check weather (in milliseconds)
+			var weatherFrequency = 600000; // every 600 seconds (= 10 minutes)
+			var forecastFrequency = 3600000; // every 3600 seconds (= 1 hour)
+			var tideFrequency = 3600000; // every 3600 seconds (= 1 hours)
+			var reloadHour = 4; // time at which to reload the entire page. Helps keep things fresh (Chrome tends to time out the websockets). 24 hour format (0 = midnight, 23 = 11 PM)
+
+			$(document).ready(function() {
+				Log("Document ready", 2);
+				Start();
+			});
+		</script>
+	</head>
+
+	<body>
+		<!-- NavBar Starts Here (Date, Time, Refresh) -->
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="topbar">
+					<div class="date">2015-01-01</div>
+					<div class="refresh fa fa-refresh fa-fw" onclick="history.go(0)"></div>
+					<div class="clock">12:00</div>
+				</div>
+			</div>
+		</nav>
+
+		<!-- Widgets Start Here -->
+		<div class="container">
+			<div style="overflow-y:auto;" id="widgetContainer">
+				<widget data-type="switch" data-item="KanKun" data-title="Living Room"></widget>
+
+				<widget data-type="switch" data-item="CamSwitch" data-title="Camera" data-icon="video-camera"></widget>
+
+				<widget data-type="openclose" data-item="Door_Motion" data-title="Front Door" data-history="true"></widget>
+
+				<widget data-type="sensor" data-item="Door_Temperature" data-title="Front Door" data-format="{0}&deg;" data-history="true"></widget>
+
+				<widget data-type="trash" data-title="Trash" data-trashday="3" data-recycleday="4"></widget>
+			</div>
+		</div>
+
+		<!-- Weather Bar Starts Here -->
+		<footer class="footer">
+			<div class="container-fluid">
+				<div class="weatherBar2">
+					<div class="barBox weather_observation">
+						<div id="observationIcon"><img src="weather/clear.png" id="observation_icon" style="top: 30px; -webkit-filter: invert(100%)" /></div>
+						<div class="observation" style="font-size: 1.8em;">
+							<p id="observation_weather">?</p>
+						</div>
+						<div class="observationInformation">
+							<div id="observation_temperature">?</div>
+							<div id="observation_feelslike">?</div>
+							<div class="underlayer">NOW</div>
+						</div>
+					</div>
+					<div class="barBox leftBorder weather_forecast">
+						<div class="weather_forecast" id="weather_today">
+							<div id="forecastIcon"><img src="weather/nt_clear.png" id="forecast_icon" style="-webkit-filter: invert(100%)" /></div>
+							<div class="forecast" style="font-size: 1.8em;">
+								<p id="forecast_conditions">?</p>
+							</div>
+							<div class="forecastInformation">
+								<div id="forecast_high">?</div>
+								<div id="forecast_low">?</div>
+								<div class="underlayer" id="forecast_title">?</div>
+							</div>
+						</div>
+						<div class="weather_forecast" id="weather_tomorrow">
+							<div id="forecastIcon"><img src="weather/nt_clear.png" id="forecast_icon" style="-webkit-filter: invert(100%)" /></div>
+							<div class="forecast" style="font-size: 1.8em;">
+								<p id="forecast_conditions">?</p>
+							</div>
+							<div class="forecastInformation">
+								<div id="forecast_high">?</div>
+								<div id="forecast_low">?</div>
+								<div class="underlayer" id="forecast_title">?</div>
+							</div>
+						</div>
+					</div>
+					<div class="barBox leftBorder tidal_observation">
+						<div class="tidal_observation" id="tide">
+							<div class="tidalPosition">
+								<div id="tide_curr_going">Currently:</div>
+								<div id="tide_status_none">?</div>
+								<div id="tide_status_high">HIGH</div>
+								<div id="tide_status_low">LOW</div>
+							</div>
+							<div class="futureTidalInfo">
+								<div id="tide_goingTop">HIGH: ? - ?</div>
+								<div id="tide_goingBottom">LOW: ? - ?</div>
+								<div class="underlayer" id="tidalUnderlay">TIDE</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
