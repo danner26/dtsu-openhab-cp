@@ -213,7 +213,7 @@ function GetHistory(widget) {
 }
 
 // Capture clicks: Weather Bar
-$(document).on("mousedown", "div.weather_forecast", function() {
+$(document).on("mousedown", "div#forecastBox", function() {
     // Switch between today & tomorrow
     if ($("#weather_today").is(":visible")) {
         $("#weather_today").hide();
@@ -327,9 +327,9 @@ function GetWeatherForecast() {
 
             $("#forecast_time").html("Forecast Time: " + data.forecast.txt_forecast.date);
 
-            // After 5 PM: show tomorrow's forecast. Before 5 PM: show today's.
+            // After 7 PM: show tomorrow's forecast. Before 7 PM: show today's.
             var today = new Date();
-            if (today.getHours() >= 17) {
+            if (today.getHours() >= 19) {
                 $("#weather_today").hide();
                 $("#weather_tomorrow").show();
             } else {

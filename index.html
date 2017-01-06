@@ -38,9 +38,9 @@
 			//var tideURL = "https://www.worldtides.info/api?extremes&lat=39.705&lon=-74.263&key=778ad6aa-f430-4b80-a8e4-d1afa09032a9";
 
 			//TESTING URLs
-			var weatherURL = "http://json.sites.dev/BEACH%20HAVEN%20WEST.json";
-			var forecastURL = "http://json.sites.dev/BEACH%20HAVEN%20WEST%20FORECAST.json";
-			var tideURL = "http://json.sites.dev/tide.json";
+			var weatherURL = "http://danstechsupport.com/JSON/BEACH%20HAVEN%20WEST.json";
+			var forecastURL = "http://danstechsupport.com/JSON/BEACH%20HAVEN%20WEST%20FORECAST.json";
+			var tideURL = "http://danstechsupport.com/JSON/tide.json";
 
 			// Logging level (0 = off, 1 = ajax errors only, 2 = some logging, 3 = full logging)
 			var loggingLevel = 3;
@@ -71,8 +71,8 @@
 		</nav>
 
 		<!-- Widgets Start Here -->
-		<div class="container">
-			<div style="overflow-y:auto;" id="widgetContainer">
+		<div class="container" style="padding-bottom: 28px;">
+			<div id="widgetContainer">
 				<widget data-type="switch" data-item="KanKun" data-title="Living Room"></widget>
 
 				<widget data-type="switch" data-item="CamSwitch" data-title="Camera" data-icon="video-camera"></widget>
@@ -100,7 +100,7 @@
 							<div class="underlayer">NOW</div>
 						</div>
 					</div>
-					<div class="barBox leftBorder weather_forecast">
+					<div class="barBox leftBorder weather_forecast" id="forecastBox">
 						<div class="weather_forecast" id="weather_today">
 							<div id="forecastIcon"><img src="weather/nt_clear.png" id="forecast_icon" style="-webkit-filter: invert(100%)" /></div>
 							<div class="forecast" style="font-size: 1.8em;">
