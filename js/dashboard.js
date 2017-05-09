@@ -355,26 +355,22 @@ function GetTide() {
             .done(function(data) {
                 console.log(data);
                 var todayInSeconds = Math.round(today.getTime() / 1000);
-                //we are currently at 0 if true
-                if (typeof data.extremes[0] !== "undefined") {
-                    var tempDate = new Date(data.extremes[0].dt * 1000);
-                    var suffix = tempDate.getHours() >= 12 ? "PM" : "AM";
-                    var formattedZeroTime = ("" + ((tempDate.getHours() + 11) % 12 + 1) + ":" + ((tempDate.getMinutes() < 10 ? '0' : '') + tempDate.getMinutes()) + " " + suffix);
+
+                if (typeof data.extremes[0] !== "undefined" && typeof data.extremes[1] !== "undefined") {
+                    var extreme = new Date(data.extremes[0].dt * 1000); var suffix = extreme.getHours() >= 12 ? "PM" : "AM";
+                    var formattedZeroTime = ("" + ((extreme.getHours() + 11) % 12 + 1) + ":" + ((extreme.getMinutes() < 10 ? '0' : '') + extreme.getMinutes()) + " " + suffix);
                     $("#tide_goingTop", "#tide").html("HIGH: " + formattedZeroTime);
+
+                    extreme = new Date(data.extremes[1].dt * 1000); suffix = extreme.getHours() >= 12 ? "PM" : "AM";
+                    formattedOneTime = ("" + ((extreme.getHours() + 11) % 12 + 1) + ":" + ((extreme.getMinutes() < 10 ? '0' : '') + extreme.getMinutes()) + " " + suffix);
+                    $("#tide_goingBottom", "#tide").html("LOW: " + formattedOneTime);
                 } else {
                     failure(data);
                     return;
                 }
-                if (typeof data.extremes[1] !== "undefined") {
-                    var tempDate = new Date(data.extremes[1].dt * 1000);
-                    var suffix = tempDate.getHours() >= 12 ? "PM" : "AM";
-                    var formattedOneTime = ("" + ((tempDate.getHours() + 11) % 12 + 1) + ":" + ((tempDate.getMinutes() < 10 ? '0' : '') + tempDate.getMinutes()) + " " + suffix);
-                    $("#tide_goingBottom", "#tide").html("LOW: " + formattedOneTime);
-                } else {
-                    $("#tide_goingBottom", "#tide").html("LOW: " + "?" + " - " + "?");
-                }
 
-
+                //CHANGE THIS TO CURRENTLY IS ONLY 1.5 HOURS AFTER - NOT BEFORE
+                //we are at 0 if true
                 if (todayInSeconds >= (data.extremes[0].dt - 5400) && todayInSeconds <= (data.extremes[0].dt + 5400)) {
                     $("#tide_curr_going", "#tide").html("Currently:");
                     if (data.extremes[0].type == "High") {
